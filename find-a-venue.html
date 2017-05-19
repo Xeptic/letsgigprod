@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Tutorials</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet"> 
+    <script src="JavaScriptBandSite.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/af.js"></script>
+
+</head>
+<body>   
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="modal fade" data-backdrop="static" id="loginModal">
+                <div class="modal-dialog">
+                    <div class="modal-content modalbg">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal"><span class="bg-info">&times;</span></button>
+                            <h4 class="modal-title text-center">Login</h4> 
+                        </div>  
+                        <div class="modal-body"> 
+                            <form>
+                                <div class="form-group">
+                                    <label for="inputUserName"><span class="formTextBg">Enter Username</span></label>
+                                    <input class="form-control form-controlGradientBg" type="text" placeholder="Username" id="inputUserName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword"><span class="formTextBg">Enter Password</span></label>
+                                    <input class="form-control form-controlGradientBg"  type="password" placeholder="Password" id="inputUserPassword">
+                                </div>
+                            </form>
+                         <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">Login</button>
+                            <button type="close" class="btn btn-warning" data-dismiss="modal">Close</button>
+                         </div>
+                       </div>
+                  </div>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>    
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="modal fade" data-backdrop="static" id="SignupModal">
+                <div class="modal-dialog">
+                    <div class="modal-content modalbg">
+                        <div class="modal-header">
+                            <button class="close bg-info" data-dismiss="modal"><span class="bg-info">&times;</span></button>
+                            <h4 class="modal-title text-center">Sign Up</h4> 
+                        </div>  
+                        <div class="modal-body"> 
+                            <form>
+                                <div class="form-group">
+                                    <label for="chooseUsername"><span class="formTextBg">Choose Username</span></label>
+                                    <input class="form-control form-controlGradientBg" type="text" placeholder="Username" id="chooseUsername">
+                                </div>
+                                <div class="form-group">
+                                    <label for="choosePassword"><span class="formTextBg">Enter Password</span></label>
+                                    <input class="form-control form-controlGradientBg"  type="password" placeholder="Password" id="chooseUserPassword">
+                                </div>
+                                <div class="form-group">
+                                    <label for="enterEmail"><span class="formTextBg">Enter Email Address</span></label>
+                                    <input class="form-control form-controlGradientBg"  type="text" placeholder="Email Address" id="chooseEmailAddress">
+                                </div>
+                            </form>
+                            </div>
+                         <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">Sign Up</button>
+                            <button type="close" class="btn btn-warning" data-dismiss="modal">Close</button>
+                         </div>
+                       
+                  </div>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>
+    
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="modal fade" data-backdrop="static" id="findAVenue">
+                <div class="modal-dialog">
+                    <div class="modal-content modalBgVenue">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal"><span class="bg-info">&times;</span></button>
+                            <h4 class="modal-title text-center FaV-color">Find a venue</h4> 
+                        </div>  
+                        <div class="modal-body"> 
+                            <div class="center">
+                            <button class="btn btn-default modalbuttonmargin" data-dismiss="modal" data-target="#recommendedVenues" data-toggle="modal" >View recommended</button>
+                            </div>
+                            <div class="white-bg">
+                            <div class="form modalFormRule">
+                             <div class="row">
+                                 <div class="col-xs-3">
+                                     <h4 class="FaV-color-black pushrighttitle">Location/s</h4>
+                                     <div class="form-group  pushright">
+                                       <select class="selectpicker form-control">
+                                         <option>London</option>
+                                         <option>Birmingham</option>
+                                         <option>Glasgow</option>
+                                         <option>Liverpool</option>
+                                         <option>Bristol	ENG</option>
+                                         <option>Manchester</option>	
+                                         <option>Sheffield</option>
+                                         <option>Leeds</option>	<option>Edinburgh</option>
+                                         <option>Leicester</option>
+                                        </select>
+                                     </div>
+                                 </div>
+                                 <div class="col-xs-3">
+                                    <h4 class="FaV-color-black genretitlefix">Genre</h4>
+                                     <div class="form-group selectpickeralign">
+                                       <select class="selectpicker form-control white-bg-solid">
+                                         <option>Rock</option>
+                                         <option>Metal</option>
+                                         <option>Reggae</option>
+                                         <option>Ska</option>
+                                         <option>Hip-Hop</option>
+                                         <option>Electronic</option>
+                                         <option>Blues</option>
+                                         <option>Jazz</option>
+                                         <option>Rap</option>
+                                         <option>Latin</option>
+                                         <option>Country</option>
+                                       </select>
+                                     </div>
+                                 </div>
+                                 <div class="col-xs-3">
+                                    <h4 class="FaV-color-black selectdatestitlefix">Select Dates</h4>
+                                     <div class='input-group date selectpickeralign' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+                                 </div>
+                                 <div class="col-xs-3">
+                                    <h4 class="FaV-color-black pushlefttitle">Crowd size</h4>
+                                     <div class="form-group modalFormRules pushleft">
+                                       <select class="selectpicker form-control white-bg-solid">
+                                         <option>Mustard</option>
+                                         <option>Ketchup</option>
+                                         <option>Relish</option>
+                                       </select>
+                                     </div>
+                                 </div>
+                             </div> 
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+    
+    
+    
+            </div>    
+    </div>
+    
+ </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="modal fade" data-backdrop="static" id="recommendedVenues">
+                <div class="modal-dialog">
+                    <div class="modal-content modalBgVenue">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal"><span class="bg-info">&times;</span></button>
+                            <h4 class="modal-title text-center FaV-color">Recommended Venues</h4> 
+                        </div>  
+                        <div class="modal-body">
+                           <div class="center">
+                              <button id="buttonfindavenue" data-dismiss="modal" class="btn btn-default" data-target="#findAVenue" data-toggle="modal">Find a venue</button>
+                           </div>
+                           <div class="form">
+                               
+                               
+                           </div>
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    
+    
+    
+    </div>    
+</div>    
+
+</body>
+</html>

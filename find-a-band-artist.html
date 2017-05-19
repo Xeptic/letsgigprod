@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Tutorials</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet"> 
+    <script type="text/javascript" src="JavaScriptBandSite.js"></script>
+<nav id="theNavBar" class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!--Logo -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#MainNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            
+                 <a href="index.html" class="navbar-brand">Let's Gig</a>
+
+                  
+            </div>
+            <!--Menu Items-->
+            
+            
+            <div class="collapse navbar-collapse" id="MainNavBar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="find-a-venue.html">Find a venue</a></li>
+                    <li class="active"><a href="find-a-band-artist.html">Find a band/artist</a></li>
+                    v
+                    
+                    <!-- Dropdown Menu -->
+                    
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Controls<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Friends</a></li>
+                            <li><a href="#">Settings</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--Navbar Title-->
+                
+                <!--Right align-->
+    
+                <ul class="nav navbar-nav navbar-right">
+                    <div class="btn-container">
+                    <ld>
+                    <button id="loginButton" class="btn btn-primary" data-target="#loginModal" data-toggle="modal">Login</button>
+                    </ld>
+                    <ld>
+                    <button id="SignupButton" class="btn btn-success" data-target="#SignupModal" data-toggle="modal">Sign Up</button>
+                    </ld>
+                    </div>
+                </ul>
+        
+                    
+            </div>
+        </div>
+    </nav>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="modal" data-backdrop="static" id="loginModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal"><span class="bg-info">&times;</span></button>
+                            <h4 class="modal-title text-center">Login</h4> 
+                        </div>  
+                        <div class="modal-body"> 
+                            <form>
+                                <div class="form-group">
+                                    <label for="inputUserName"><span class="formTextBg">Enter Username</span></label>
+                                    <input class="form-control" type="text" placeholder="Username" id="inputUserName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputPassword"><span class="formTextBg">Enter Password</span></label>
+                                    <input class="form-control"  type="password" placeholder="Password" id="inputUserPassword">
+                                </div>
+                            </form>
+                         <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">Login</button>
+                            <button type="close" class="btn btn-warning" data-dismiss="modal">Close</button>
+                         </div>
+                       </div>
+                  </div>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>
+    
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="modal" data-backdrop="static" id="SignupModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close bg-info" data-dismiss="modal"><span class="bg-info">&times;</span></button>
+                            <h4 class="modal-title text-center">Sign Up</h4> 
+                        </div>  
+                        <div class="modal-body"> 
+                            <form>
+                                <div class="form-group">
+                                    <label for="chooseUsername"><span class="formTextBg">Choose Username</span></label>
+                                    <input class="form-control" type="text" placeholder="Username" id="chooseUsername">
+                                </div>
+                                <div class="form-group">
+                                    <label for="choosePassword"><span class="formTextBg">Enter Password</span></label>
+                                    <input class="form-control"  type="password" placeholder="Password" id="chooseUserPassword">
+                                </div>
+                                <div class="form-group">
+                                    <label for="enterEmail"><span class="formTextBg">Enter Email Address</span></label>
+                                    <input class="form-control"  type="text" placeholder="Email Address" id="chooseEmailAddress">
+                                </div>
+                            </form>
+                        </div>
+                         <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">Sign Up</button>
+                            <button type="close" class="btn btn-warning" data-dismiss="modal">Close</button>
+                         </div>
+                       
+                  </div>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>
+<h2>Find a band/artist</h2>
+    <div class="form-group">
+    <div class="input-group date" id="datetimepicker1">
+        <input type="text" class="form-control" /><span class="input-group-addon"><span class="glyphicon-calendar glyphicon"></span></span>
+         </div>
+</div>
+    
+<div><h2 id="testingJQ"> TESTING JQ </h2></div>
+<div class="container">  
+    <div class="row">
+        <div class="col-xs-3">
+            <div class="featuredDivs">
+            <img class="featuredImages img-responsive" src="soad300x300.jpg"/>
+            <div class="img-captions">System Of A Down</div>
+        </div>
+        </div>
+
+        <div class="col-xs-3">
+            <div class="featuredDivs">
+            <img class="featuredImages img-responsive" src="inflames300x300.jpg"/>
+            <div class="img-captions">InFlames</div>
+        </div>
+        </div>
+
+        <div class="col-xs-3">
+            <div class="featuredDivs">
+            <img class="featuredImages img-responsive" src="Muse300x300.jpg"/>
+            <div class="img-captions">Muse</div>
+        </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="featuredDivs">
+            <img class="featuredImages img-responsive" src="Muse300x300.jpg"/>
+            <div class="img-captions">Muse</div>
+        </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
