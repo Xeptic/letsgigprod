@@ -84,12 +84,12 @@ if (login_check($mysqli) == true) {
 <body>
  <?php// if (login_check($mysqli) == true){ echo 'logged ' . $logged . ' as ' . htmlentities($_SESSION['username']);} ?> 
 <?php  ?>
-<div id="bandheadwrapper">
-    <div class="">
-        <div>
+<div id="bandheadwrapper" class="container-fluid">
+    <div class="row">
+        <div class="col-xs-3">
             <img id="bandImage" src="Muse300x300.jpg">
         </div>
-        <div id="bandNameHeader" class="">
+        <div id="bandNameHeader" class="col-xs-9">
                 <?php echo "<h1>" . $current_user . "</h1>" ?>
         </div>
     </div> 
