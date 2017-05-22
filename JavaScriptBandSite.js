@@ -38,6 +38,53 @@ $(window).resize( function(){
      $("#bandNameHeader").addClass("")
 });
 
-
-
- 
+$('document').ready(function()
+{ 
+     /* validation */
+  $("#login-form").validate({
+      rules:
+   {
+        password: {
+            required: true,
+        },
+        username: {
+            required: true,
+        },
+    },
+       messages:
+    {
+            password:{
+                      required: "please enter your password"
+                     },
+            username: "please enter your username",
+       },
+    submitHandler: submitForm 
+       });  
+    /* validation */
+    
+    /* login submit */
+    function submitForm()
+    {  
+   var data = $("#login-form").serialize();
+    
+   $.ajax({
+   type : 'POST',
+   url  : '/includes/process_login.php',
+   data : data,
+   success :  function(response)
+      {      
+     if(response=="ok"){
+         window.location.href = "home.php";
+     }
+     else{
+         
+      $("#error").fadeIn(1000, function(){  
+    $("#error").html(response);
+         });
+     }
+     }
+   });
+    return false;
+  }
+    /* login submit */
+}); 

@@ -20,6 +20,7 @@ sec_session_start();
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="bootstrap/js/jquery.validate.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet"> 
     <script type="text/javascript" src="JavaScriptBandSite.js"></script>
@@ -267,7 +268,7 @@ sec_session_start();
                             <h4 class="modal-title text-center">Login</h4> 
                         </div>  
                         <div class="modal-body"> 
-                            <form action="includes/process_login.php" method="post">
+                            <form id="login-form" method="post">
                                 <div class="form-group">
                                     <label for="inputUserName"><span class="formTextBg">Enter Username</span></label>
                                     <input class="form-control form-controlGradientBg" type="text" placeholder="Username" name="username" id="username">
@@ -277,7 +278,8 @@ sec_session_start();
                                     <input class="form-control form-controlGradientBg"  type="password" placeholder="Password" name="password" id="password">
                                 </div>
 								<div class="modal-footer">
-									<button type="submit" name="login" alt="login" class="btn btn-success">Login</button>
+								<div id="error"></div>
+									<button type="submit" name="login" id="btn-login" alt="login" class="btn btn-success">Login</button>
 									<button type="close" class="btn btn-warning" data-dismiss="modal">Close</button>
 								</div>
                             </form>
