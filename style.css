@@ -238,9 +238,8 @@ subhead{
     margin-left:-12px;
     background-size: cover;
     border-radius: 6px;
-    min-height: 140%;
+    min-height: 100%;
     width: 100%;
-    
 }
 #userProfileContent{
     background-image: linear-gradient(#666,#FFF);
@@ -252,7 +251,7 @@ subhead{
 }
 #bandNameHeader{
     min-height: 100%;
-    max-height: 50%;
+    max-height: 100%;
     margin: 0px 0px 0px 28%;
     border-radius: 5px;
     width: 70%;
@@ -276,8 +275,8 @@ subhead{
 }
 
 #userProfileContent{
-    margin:20px 0px 5px 0px;
-    text-align: center;
+    margin: 24px 0px 5px 0px;
+    text-align: left;
     font-size: 1.8vw;
     border-radius: 5px;
     width: 100%;
@@ -289,8 +288,21 @@ subhead{
     height:100%;
     border-radius: 5px;
     color: red;
-    margin: 0px 0px -20px 0px;
+    margin: 5px 0px -20px 0px;
 }
 #TEMPUSERNAMELOCATION{
-    margin-top 50%;
+    margin-top:400px;
 }
+#profilePictureFrame{
+}
+#profileText{
+    position: relative;
+    margin: 5% 0 0 0;
+}
+profileText{
+    text-align: left;
+    font-size: 2vw;
+    font-family: 'BioRhyme', serif;
+    color: red;
+}
+

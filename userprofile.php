@@ -87,12 +87,12 @@ if (login_check($mysqli) == true) {
 <?php  ?>
 <div id="profileWrapper" class="container-fluid">
     <div class="row">
-        <div class="col-xs-3">
+        <div id="profilePictureFrame" class="col-xs-3">
             <img id="bandImage" src="Muse300x300.jpg">
             <a data-target="#editProfilePicture" data-toggle="modal" class="profileImageText bg-info" >Edit</a>
         </div>
         <div id="bandNameHeader" class="col-xs-9">
-            <div id="bandName"><img src="testbanner1400.jpg"></div>
+            <div id="bandName"><img src="testbanner1400x400.jpg"></div>
                 <div id="userProfileContent" class="container-fluid">   
                     <div class="row">
                         <div class="col-xs-4">
@@ -109,9 +109,25 @@ if (login_check($mysqli) == true) {
             </div>
         </div>
         
-    </div> 
-
+    </div>
+<div id="profileText" class="container-fluid">
+    <table>
+    <thead>
+    <th class="center"><h2 ><em><u>Band/Artist Bio</u></em></h2><th>    
+    </thead>
+    <tbody>
+        <tr>
+        <td>
+            <profileText>This is where all the fucking profile information goes,nobodys care about how shit your band is you fucking cunt</profileText>
+        </td>
+        </tr>    
+        
+    </tbody>
+    </table>
+    
+    </div>
 </div>
+
 <div id="TEMPUSERNAMELOCATION"><?php echo "<h1>" . $current_user . "</h1>" ?></div>
     
 <div class="container-fluid">
