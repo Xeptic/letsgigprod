@@ -284,3 +284,12 @@ subhead{
     position: relative;
     border: 2px solid red;
 }
+#bandName{
+    background-image: url("musebanner.jpg");
+    width: 100%;
+    height: auto;
+    border: 2px solid red;
+    color: red;
+    margin: 0 0 -14px 0;
+    background-size: cover;
+}
