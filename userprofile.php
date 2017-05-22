@@ -92,7 +92,7 @@ if (login_check($mysqli) == true) {
             <a data-target="#editProfilePicture" data-toggle="modal" class="profileImageText bg-info" >Edit</a>
         </div>
         <div id="bandNameHeader" class="col-xs-9">
-                <div id="bandName"><?php echo "<h1>" . $current_user . "</h1>" ?></div>
+            <div id="bandName"><img src="testbanner1400.jpg"></div>
                 <div id="userProfileContent" class="container-fluid">   
                     <div class="row">
                         <div class="col-xs-4">
@@ -112,7 +112,7 @@ if (login_check($mysqli) == true) {
     </div> 
 
 </div>
-  
+<div id="TEMPUSERNAMELOCATION"><?php echo "<h1>" . $current_user . "</h1>" ?></div>
     
 <div class="container-fluid">
     <div class="row">
@@ -262,6 +262,6 @@ if (login_check($mysqli) == true) {
         </div>
     </div>    
 </div>  
-    
+
 </body>
 </html>

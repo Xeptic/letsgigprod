@@ -258,7 +258,7 @@ subhead{
     width: 70%;
     position: relative;
     background-image: linear-gradient(#666,#FFF);
-    border: 2px solid red;
+    border: 1px solid black;
 }
 .profileImageText{
     position: absolute;
@@ -276,20 +276,21 @@ subhead{
 }
 
 #userProfileContent{
-    margin-top:25px;
+    margin:20px 0px 5px 0px;
     text-align: center;
-    font-size: 2vw;
+    font-size: 1.8vw;
     border-radius: 5px;
     width: 100%;
     position: relative;
-    border: 2px solid red;
+    
 }
-#bandName{
-    background-image: url("musebanner.jpg");
-    width: 100%;
-    height: auto;
-    border: 2px solid red;
+#bandName img{
+    width:100%;
+    height:100%;
+    border-radius: 5px;
     color: red;
-    margin: 0 0 -14px 0;
-    background-size: cover;
+    margin: 0px 0px -20px 0px;
+}
+#TEMPUSERNAMELOCATION{
+    margin-top 50%;
 }
