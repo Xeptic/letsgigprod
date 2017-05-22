@@ -34,6 +34,10 @@ $("#venuesClose").click(function(){
 });
 
 
+$(window).resize( function(){
+     $("#bandNameHeader").addClass("")
+});
+
 
 
  

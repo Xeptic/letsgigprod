@@ -1,0 +1,81 @@
+<?php
+include_once 'includes/db_connect.php';
+include_once 'includes/functions.php';
+include_once 'includes/follow.php';
+include_once 'includes/profiles.php';
+
+
+sec_session_start();
+
+if(empty($_SESSION['username'])) {
+   header("Location: index.php");
+}else{
+	$username = mysqli_real_escape_string($mysqli,$_REQUEST['username']);
+	//$profile_username=$rws['username'];
+    //if(!$_SESSION['username']){
+        //header("location:$username");
+    //}
+}
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title><?php echo $username;?>'s Profile</title>
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
+    <body>
+        <?php if (login_check($mysqli) == true) : ?>
+            			
+<?php
+    $sql = "SELECT * FROM bands WHERE username='$username'";
+    $result = mysqli_query($mysqli,$sql);
+    while($row = mysqli_fetch_array($result,MYSQLI_BOTH)) :
+?>
+			<p><h1><?php echo $row['bandname'];?></h1></p>
+			<p>ID: <?php echo $row['id'];?>
+			<p>Name: <?php echo $row['firstname'];?> <?php echo $row['lastname'];?></p>
+			<p>Genre: <?php echo $row['genre'];?></p>
+			<p>Location: <?php echo $row['location'];?></p>
+			<p>Bio: <?php echo $row['bio'];?></p>
+			<p>Website: <a href="http://<?php echo $row['website'];?>"><?php echo $row['website'];?></a></p>
+			<p>Facebook: <a href="http://<?php echo $row['facebook'];?>"><?php echo $row['facebook'];?></a></p>
+			<p>Soundcloud: <a href="http://<?php echo $row['soundcloud'];?>"><?php echo $row['soundcloud'];?></a></p>
+			<p>Twitter: <a href="http://<?php echo $row['twitter'];?>"><?php echo $row['twitter'];?></a></p>
+			<p>Youtube: <a href="http://<?php echo $row['youtube'];?>"><?php echo $row['youtube'];?></a></p>
+			<p>Mixcloud: <a href="http://<?php echo $row['mixcloud'];?>"><?php echo $row['mixcloud'];?></a></p>
+			<p></p>
+			<p></p>
+			<?php	
+
+$value = $row['username'];
+$key = $row['id'];
+$current_user = $_SESSION['user_id'];
+
+
+$_SESSION['backURL'] = $_SERVER['REQUEST_URI'];
+
+		if (is_following($_SESSION['user_id'], $row['id'], $mysqli)){
+				echo "<a href='includes/action.php?name=$value&id=$key&do=unfollow'>unfollow</a>";
+		}else{
+				echo "<a href='includes/action.php?name=$value&id=$key&do=follow'>follow</a>";
+		}
+		if (isset($_SESSION['same'])){
+		echo "<b>". $_SESSION['same']."</b>";
+		unset($_SESSION['same']);
+}
+?>
+			<p></p>
+             <?php endwhile; ?>
+
+			
+			<p><a href="includes/logout.php">Log out</a><br></br>
+				<a href="home.php">Home</a>
+			</p>
+        <?php else : ?>
+            <p>
+                <span class="error">You are not authorized to access this page.</span> Please <a href="index.php">login</a>.
+            </p>
+        <?php endif; ?>
+    </body>
+</html>

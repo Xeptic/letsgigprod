@@ -24,6 +24,7 @@ if (login_check($mysqli) == true) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="src/"></script>
     <title>Bootstrap Tutorials</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -88,13 +89,12 @@ if (login_check($mysqli) == true) {
     <div class="row">
         <div class="col-xs-3">
             <img id="bandImage" src="Muse300x300.jpg">
+            <a data-target="#editProfilePicture" data-toggle="modal" class="profileImageText bg-info" >Edit</a>
         </div>
         <div id="bandNameHeader" class="col-xs-9">
                 <?php echo "<h1>" . $current_user . "</h1>" ?>
         </div>
     </div> 
-</div>
-    <!--
 <div id="userProfileContent" class="container-fluid">   
         <div class="row">
                 <div class="col-xs-4">
@@ -109,7 +109,45 @@ if (login_check($mysqli) == true) {
         </div>
     
 </div>
--->
+</div>
+  
+    
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="modal fade" data-backdrop="static" id="editProfilePicture">
+                <div class="modal-dialog">
+                    <div class="modal-content modalBgVenue">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal"><span class="bg-info">&times;</span></button>
+                            <h4 class="modal-title text-center FaV-color">Upload profile image</h4> 
+                        </div>  
+                        <div class="modal-body">
+                           <div class="center">
+                              <div id="image-cropper">
+                                <!-- This is where the preview image is displayed -->
+                                <div class="cropit-preview"><img src="Brixton_Jamm300x300.png"></div>
+                                
+                                <!-- This range input controls zoom -->
+                                <!-- You can add additional elements here, e.g. the image icons -->
+                                <input type="range" class="cropit-image-zoom-input" />
+                                
+                                <!-- This is where user selects new image -->
+                                <input type="file" class="cropit-image-input" />
+                                
+                                <!-- The cropit- classes above are needed
+                                     so cropit can identify these elements -->
+                               </div>
+                           </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div> 
+
+
     
   <!-- Find a venue / Reccomended  -->   
 <div class="container-fluid">
