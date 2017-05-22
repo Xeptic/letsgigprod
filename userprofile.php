@@ -27,6 +27,10 @@ if (login_check($mysqli) == true) {
     <script src="src/"></script>
     <title>Bootstrap Tutorials</title>
     <meta charset="utf-8">
+    
+    <script type="javascript" src="src/"></script>
+    
+    <script type="javascript" src="test/"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -87,44 +91,72 @@ if (login_check($mysqli) == true) {
 <?php  ?>
 <div id="profileWrapper" class="container-fluid">
     <div class="row">
-        <div id="profilePictureFrame" class="col-xs-3">
-            <img id="bandImage" src="Muse300x300.jpg">
-            <a data-target="#editProfilePicture" data-toggle="modal" class="profileImageText"><span id="editProfilePictureButton" class="glyphicon glyphicon-edit"></span></a>
-        </div>
-        <div id="bandNameHeader" class="col-xs-9">
-            <div id="bandName"><a data-toggle="modal" data-target="#editProfileBanner"><span id="editBannerButton" class="glyphicon glyphicon-edit"></span></a><img src="testbanner1400x400.jpg"></div>
-                <div id="userProfileContent" class="container-fluid">   
-                    <div class="row">
-                        <div class="col-xs-4">
-                        Genre
-                        </div>
-                         <div class="col-xs-4">
-                        Members
-                        </div>
-                         <div class="col-xs-4">
-                        Date formed
-                        </div>
-                    </div>
-    
+        <div class="col-xs-3">
+            <div id="profilePictureFrame">
+                <img id="bandImage" src="Muse300x300.jpg">
+                <a data-target="#editProfilePicture" data-toggle="modal" id="editProfileImage">
+                    <span id="editProfilePictureButton" class="glyphicon glyphicon-edit"></span>
+                </a>
+            </div>
+            <div id="bandInfo" class="container-fluid">
+            <table id="bandInfoTable" >
+              <thead>
+                <th class="center" colspan="2">Band Info</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Genre/s: </td>
+                  <td>*Genre </td>
+                </tr> 
+                  <tr>
+                      <td>Location: </td>
+                     <td>*location</td>
+                  </tr>
+                <tr>
+                  <td># of members: </td>  
+                  <td> *memNumb </td>
+                </tr>
+                
+              </tbody>    
+            </table>
+            
             </div>
         </div>
-        
-    </div>
-<div id="profileText" class="container-fluid">
-    <table>
-    <thead>
-    <th class="center"><h2 ><em><u>Band/Artist Bio</u></em></h2><th>    
-    </thead>
-    <tbody>
-        <tr>
-        <td>
-            <profileText>This is where all the fucking profile information goes,nobodys care about how shit your band is you fucking cunt</profileText>
-        </td>
-        </tr>    
-        
-    </tbody>
-    </table>
-    
+        <div id="bandNameHeader" class="col-xs-9">
+            <div id="bandName">
+                <a data-toggle="modal" data-target="#editProfileBanner">
+                    <span id="editBannerButton" class="glyphicon glyphicon-edit"></span>
+                </a>
+                <img src="testbanner1400x400.jpg">
+            </div>
+               <div id="userProfileContent" class="container-fluid">   
+                <div class="row">
+                   <div class="col-xs-4">
+                       Social Media Links
+                   </div>
+                   <div class="col-xs-4">
+                        **links
+                   </div>
+                   <div class="col-xs-4">
+                        **links
+                   </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div id="bandBioHeader">
+                                <bandbio>Bio</bandbio>
+                            </div>
+                            <div id="bandBioTextBox">
+                                <bandbiotext>
+                                    We're fucking dank yo, we'll get bare mans to your venue and shiet, We're fucking dank yo, we'll get bare mans to your venue and shiet We're fucking dank yo, we'll get bare mans to your venue and shiet We're fucking dank yo, we'll get bare mans to your venue and shiet We're fucking dank yo, we'll get bare mans to your venue and shiet We're fucking dank yo, we'll get bare mans to your venue and shiet We're fucking dank yo.
+                                </bandbiotext>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -311,6 +343,8 @@ if (login_check($mysqli) == true) {
         </div>
     </div>    
 </div>  
-
+<footer>
+This is the footer
+</footer>
 </body>
 </html>

@@ -235,7 +235,7 @@ subhead{
 #bandImage{
     z-index: 1;
     position: absolute;
-    margin-left:-12px;
+    margin: 5px 0px 0px -5px;
     background-size: cover;
     border-radius: 6px;
     min-height: 100%;
@@ -244,10 +244,9 @@ subhead{
 #userProfileContent{
     background-image: linear-gradient(#666,#FFF);
     border-radius: 10px;
-    
 }
 #profileWrapper{
-    background-image: repeating-linear-gradient(#666,#fff);
+    background-color: black;
 }
 #bandNameHeader{
     min-height: 100%;
@@ -256,15 +255,13 @@ subhead{
     border-radius: 5px;
     width: 70%;
     position: relative;
-    background-image: linear-gradient(#666,#FFF);
-    border: 1px solid black;
+    background-color: ;
 }
-.profileImageText{
+#editProfileImage{
     position: absolute;
-    margin-left:-10px;
-    font-family: 'BioRhyme', serif;
-    font-size: 2vw;
+    margin-left:-5px;
     z-index: 3;
+    color: gainsboro;
 }
 #image-cropper{
 
@@ -287,29 +284,71 @@ subhead{
     width:100%;
     height:100%;
     border-radius: 5px;
-    color: red;
-    margin: 5px 0px -20px 0px;
+    margin: -20px 0px;
 }
 #TEMPUSERNAMELOCATION{
     margin-top:400px;
 }
-#profilePictureFrame{
-}
+
 #profileText{
+    background-color: grey;
+    border-radius: 5px;
+    width: 100%;
     position: relative;
-    margin: 5% 0 0 0;
+    margin: 0 0 0 0;
 }
-profileText{
-    text-align: left;
-    font-size: 2vw;
-    font-family: 'BioRhyme', serif;
-    color: red;
+
 }
 #editBannerButton{
     position: absolute;
-    margin-top: 1%;
+    margin: 0 0 0 30px;
+    color: gainsboro;
 }
 #editBannerFrameSize{
     width: 100%;
     height: auto;
+    background-color: aliceblue;
+}
+bandbio{
+    margin-left: 5px;
+    text-align: left;
+    font-size: 2vw;
+}
+#bandBioHeader{
+    margin: 0 -30px;
+    background-image: linear-gradient(#fff,#666);
+}
+bandbiotext{
+    line-height: 50%;
+    font-size: 1.5vw;
+    font-family: sans-serif;
+    
+}
+#bandBioTextBox{
+    margin: -0px -30px;
+    padding: 5px 5px;
+}
+
+#bandInfo{
+    max-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    margin: 103% 0 0 -5px;
+    position: absolute;
+    
+}
+#bandInfoTable{
+   position: absolute;
+   margin: 0px 0px 0px -15px;
+   min-width: 100%;
+   min-height: 150%;
+   width: 100%;
+   color: black;
+   font-size: 1.5vw;
+   background-color: lightskyblue;
+   border: 1px solid white;  
+}
+td{
+    border: 1px solid white;
+    background-color: powderblue;
 }
