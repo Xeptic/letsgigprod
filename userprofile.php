@@ -85,7 +85,7 @@ if (login_check($mysqli) == true) {
 <body>
  <?php// if (login_check($mysqli) == true){ echo 'logged ' . $logged . ' as ' . htmlentities($_SESSION['username']);} ?> 
 <?php  ?>
-<div id="bandheadwrapper" class="container-fluid">
+<div id="profileWrapper" class="container-fluid">
     <div class="row">
         <div class="col-xs-3">
             <img id="bandImage" src="Muse300x300.jpg">
@@ -93,22 +93,24 @@ if (login_check($mysqli) == true) {
         </div>
         <div id="bandNameHeader" class="col-xs-9">
                 <?php echo "<h1>" . $current_user . "</h1>" ?>
-        </div>
-    </div> 
-<div id="userProfileContent" class="container-fluid">   
-        <div class="row">
-                <div class="col-xs-4">
-                <p>Genre,years together,</p>
-                </div>
-                 <div class="col-xs-4">
-                <p>This is just for testing</p>
-                </div>
-                 <div class="col-xs-4">
-                <p>This is just for testing</p>
-                </div>
-        </div>
+                <div id="userProfileContent" class="container-fluid">   
+                    <div class="row">
+                        <div class="col-xs-4">
+                        Genre
+                        </div>
+                         <div class="col-xs-4">
+                        Members
+                        </div>
+                         <div class="col-xs-4">
+                        Date formed
+                        </div>
+                    </div>
     
-</div>
+            </div>
+        </div>
+        
+    </div> 
+
 </div>
   
     
