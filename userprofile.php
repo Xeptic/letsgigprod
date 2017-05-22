@@ -89,10 +89,10 @@ if (login_check($mysqli) == true) {
     <div class="row">
         <div id="profilePictureFrame" class="col-xs-3">
             <img id="bandImage" src="Muse300x300.jpg">
-            <a data-target="#editProfilePicture" data-toggle="modal" class="profileImageText bg-info" >Edit</a>
+            <a data-target="#editProfilePicture" data-toggle="modal" class="profileImageText"><span id="editProfilePictureButton" class="glyphicon glyphicon-edit"></span></a>
         </div>
         <div id="bandNameHeader" class="col-xs-9">
-            <div id="bandName"><img src="testbanner1400x400.jpg"></div>
+            <div id="bandName"><a data-toggle="modal" data-target="#editProfileBanner"><span id="editBannerButton" class="glyphicon glyphicon-edit"></span></a><img src="testbanner1400x400.jpg"></div>
                 <div id="userProfileContent" class="container-fluid">   
                     <div class="row">
                         <div class="col-xs-4">
@@ -135,16 +135,16 @@ if (login_check($mysqli) == true) {
         <div class="col-xs-12">
             <div class="modal fade" data-backdrop="static" id="editProfilePicture">
                 <div class="modal-dialog">
-                    <div class="modal-content modalBgVenue">
+                    <div class="modal-content">
                         <div class="modal-header">
                             <button class="close" data-dismiss="modal"><span class="bg-info">&times;</span></button>
-                            <h4 class="modal-title text-center FaV-color">Upload profile image</h4> 
+                            <h4 class="modal-title text-center">Upload profile image</h4> 
                         </div>  
                         <div class="modal-body">
                            <div class="center">
                               <div id="image-cropper">
                                 <!-- This is where the preview image is displayed -->
-                                <div class="cropit-preview"><img src="Brixton_Jamm300x300.png"></div>
+                                <div class="cropit-preview"><img src="Muse300x300.jpg"></div>
                                 
                                 <!-- This range input controls zoom -->
                                 <!-- You can add additional elements here, e.g. the image icons -->
@@ -164,7 +164,40 @@ if (login_check($mysqli) == true) {
         </div>
     </div>    
 </div> 
-
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="modal fade" data-backdrop="static" id="editProfileBanner">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" data-dismiss="modal"><span class="bg-info">&times;</span></button>
+                            <h4 class="modal-title text-center">Edit profile banner</h4> 
+                        </div>  
+                        <div class="modal-body">
+                           <div class="center">
+                              <div id="image-cropper">
+                                <!-- This is where the preview image is displayed -->
+                                <div class="cropit-preview"><img id="editBannerFrameSize" src="testbanner1400x400.jpg"></div>
+                                
+                                <!-- This range input controls zoom -->
+                                <!-- You can add additional elements here, e.g. the image icons -->
+                                <input type="range" class="cropit-image-zoom-input" />
+                                
+                                <!-- This is where user selects new image -->
+                                <input type="file" class="cropit-image-input" />
+                                
+                                <!-- The cropit- classes above are needed
+                                     so cropit can identify these elements -->
+                               </div>
+                           </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>  
 
     
   <!-- Find a venue / Reccomended  -->   

@@ -261,7 +261,7 @@ subhead{
 }
 .profileImageText{
     position: absolute;
-    margin: 90% 0 20% 0;
+    margin-left:-10px;
     font-family: 'BioRhyme', serif;
     font-size: 2vw;
     z-index: 3;
@@ -305,4 +305,11 @@ profileText{
     font-family: 'BioRhyme', serif;
     color: red;
 }
-
+#editBannerButton{
+    position: absolute;
+    margin-top: 1%;
+}
+#editBannerFrameSize{
+    width: 100%;
+    height: auto;
+}
