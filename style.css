@@ -233,6 +233,7 @@ subhead{
 }
 
 #bandImage{
+    border: 2px solid white;
     z-index: 1;
     position: absolute;
     margin: 5px 0px 0px -5px;
@@ -242,11 +243,11 @@ subhead{
     width: 100%;
 }
 #userProfileContent{
-    background-image: linear-gradient(#666,#FFF);
+    background-image: repeating-linear-gradient(#fff,#666);
     border-radius: 10px;
 }
 #profileWrapper{
-    background-color: black;
+    background-color: #666;
 }
 #bandNameHeader{
     min-height: 100%;
@@ -255,11 +256,10 @@ subhead{
     border-radius: 5px;
     width: 70%;
     position: relative;
-    background-color: ;
 }
 #editProfileImage{
     position: absolute;
-    margin-left:-5px;
+    margin: 3% 0px 2% 0px;
     z-index: 3;
     color: gainsboro;
 }
@@ -316,7 +316,7 @@ bandbio{
 }
 #bandBioHeader{
     margin: 0 -30px;
-    background-image: linear-gradient(#fff,#666);
+    background-image: linear-gradient(#666,#fff);
 }
 bandbiotext{
     line-height: 50%;
@@ -352,3 +352,38 @@ td{
     border: 1px solid white;
     background-color: powderblue;
 }
+
+ /* Style all font awesome icons */
+#socialIconsTable td{
+    padding: 0px 5px;
+}
+.fa {
+    width:100%;
+    height: auto;
+    font-size: 2vw;
+    border-radius: 5%;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+    
+    background: #3B5998;
+    color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+} 
+.fa-soundcloud{
+    background:#f70;
+    color: white;
+}
+.fa-instagram{
+    background:#bc2a8d;
+    color: white;
+}
+

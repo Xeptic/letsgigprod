@@ -25,10 +25,10 @@ if (login_check($mysqli) == true) {
 <html lang="en">
 <head>
     <script src="src/"></script>
-    <title>Bootstrap Tutorials</title>
+    <title>Let's Gig - My Profile</title>
     <meta charset="utf-8">
-    
-    <script type="javascript" src="src/"></script>
+    <script type="text/javascript" src="dist/jquery.cropit.js"></script>
+    <script type="text/javascript" src="src/"></script>
     
     <script type="javascript" src="test/"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -122,7 +122,7 @@ if (login_check($mysqli) == true) {
             
             </div>
         </div>
-        <div id="bandNameHeader" class="col-xs-9">
+    <div id="bandNameHeader" class="col-xs-9">
             <div id="bandName">
                 <a data-toggle="modal" data-target="#editProfileBanner">
                     <span id="editBannerButton" class="glyphicon glyphicon-edit"></span>
@@ -131,16 +131,28 @@ if (login_check($mysqli) == true) {
             </div>
                <div id="userProfileContent" class="container-fluid">   
                 <div class="row">
-                   <div class="col-xs-4">
-                       Social Media Links
-                   </div>
-                   <div class="col-xs-4">
-                        **links
-                   </div>
-                   <div class="col-xs-4">
-                        **links
-                   </div>
+                    <div class="col-xs-4">
+                        <table id="socialIconsTable">
+                            <tr>
+                               <td><a href="#" class="btn-twitter">
+                                     <i class="fa fa-twitter"></i>
+                                 </a></td>
+                               <td><a href="#" class="btn-facebook">
+                                        <i class="fa fa-facebook"></i>
+                                  </a></td>
+                               <td><a href="#" class="btn-soundcloud">
+                                      <i class="fa fa-soundcloud"></i>
+                                  </a></td>
+                               <td> <a href="#" class="btn-instagram">
+                                      <i class="fa fa-instagram"></i>
+                                  </a></td>
+                            </tr>
+                        
+                        </table>
+                    </div>
                 </div>
+                   
+            
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xs-12">
@@ -161,7 +173,7 @@ if (login_check($mysqli) == true) {
 </div>
 
 <div id="TEMPUSERNAMELOCATION"><?php echo "<h1>" . $current_user . "</h1>" ?></div>
-    
+    <!-- edit picture-->
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12">
@@ -196,6 +208,7 @@ if (login_check($mysqli) == true) {
         </div>
     </div>    
 </div> 
+    <!-- edit banner-->
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12">
@@ -345,6 +358,7 @@ if (login_check($mysqli) == true) {
 </div>  
 <footer>
 This is the footer
+    
 </footer>
 </body>
 </html>
