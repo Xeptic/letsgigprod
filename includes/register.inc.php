@@ -15,7 +15,7 @@ if (isset($_POST['register'])){
 	
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Not a valid email
-        $error_msg .= '<p class="error">The email address you entered is not valid</p>';
+        echo "The email address you entered is not valid";
     }
   
     // Username validity and password validity have been checked client side.
@@ -34,9 +34,12 @@ if (isset($_POST['register'])){
  
         if ($stmt->num_rows == 1) {
             // A user with this email address already exists
-            $error_msg .= '<p class="error">A user with this email address already exists.</p>';
+            $error_msg .= 'A user with this email address already exists.';
+            echo "A user with this email address already exists.";
         }
                 $stmt->close();
+    } else {
+        $error_msg .= '<p class="error">Database error Line 39</p>';
     }
  
     // check existing username
@@ -50,7 +53,8 @@ if (isset($_POST['register'])){
  
                 if ($stmt->num_rows == 1) {
                         // A user with this username already exists
-                        $error_msg .= '<p class="error">A user with this username already exists</p>';
+                        $error_msg .= 'A user with this username already exists';
+                        echo "A user with this username already exists.";
                 }
                 $stmt->close();
         }
@@ -66,11 +70,9 @@ if (isset($_POST['register'])){
         if ($insert_stmt = $mysqli->prepare("INSERT INTO bands (username, email, password, membertype) VALUES (?, ?, ?, ?)")) {
             $insert_stmt->bind_param('ssss', $username, $email, $hash, $membertype);
             // Execute the prepared query.
-            if (! $insert_stmt->execute()) {
-                header('Location: ../error.php?err=Registration failure: INSERT');
-            }
+            $insert_stmt->execute();
         }
-        header('Location: ../index.php');
-		$stmt->close();
+        //header('Location: ../index.php');
+        echo "ok";
     }
 }

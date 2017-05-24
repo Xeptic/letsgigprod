@@ -27,7 +27,7 @@ function login($username, $password, $mysqli) {
 		$stmt = $mysqli->prepare("SELECT id, username, password FROM bands WHERE username = ?");
 		$stmt->bind_param('s', $username);  // Bind "$username" to parameter.
 		$stmt->execute();    // Execute the prepared query.
-		$stmt->bind_result();
+		$stmt->bind_result($id, $username, $password);
  
         // get variables from result.
         $result = $stmt->get_result();

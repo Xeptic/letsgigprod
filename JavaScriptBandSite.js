@@ -40,7 +40,7 @@ $(window).resize( function(){
 
 $('document').ready(function()
 { 
-     /* validation */
+     /* start login validation */
   $("#login-form").validate({
       rules:
    {
@@ -60,9 +60,9 @@ $('document').ready(function()
        },
     submitHandler: submitForm 
        });  
-    /* validation */
+    /* end login validation */
     
-    /* login submit */
+    /* start login submit */
     function submitForm()
     {  
    var data = $("#login-form").serialize();
@@ -86,5 +86,70 @@ $('document').ready(function()
    });
     return false;
   }
-    /* login submit */
+    /* end login submit */
+    
+    
+    
+    
+    
+    
+    /* start register validation */
+  $("#register-form").validate({
+      rules:
+   {
+        password: {
+            required: true,
+            minlength: 3
+        },
+        username: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+        },
+       email: {
+           required: true,
+           email: true
+       }
+    },
+       messages:
+    {
+            username:{
+                    required: "Please enter your username",
+                    minlength: "Username must be more than 2 characters",
+                    maxlength: "Username must be no more than 15 characters"
+            },
+            password:{
+                    required: "Please enter your password",
+                    minlength: "Password needs to be a minimum of 3 Character"
+                     },
+            email: "Please enter an email address"
+       },
+    submitHandler: submitRegForm 
+       });  
+    /* end register validation */
+    
+    /* start register submit */
+    function submitRegForm()
+    {  
+   var data = $("#register-form").serialize();
+    
+   $.ajax({
+   type : 'POST',
+   url  : '/includes/register.inc.php',
+   data : data,
+   success :  function(response)
+      {      
+     if(response=="ok"){
+         window.location.href = "register_success.php";
+     }
+     else{   
+      $("#error2").fadeIn(1000, function(){  
+    $("#error2").html(response);
+         });
+     }
+     }
+   });
+    return false;
+  }
+    /* end register submit */
 }); 

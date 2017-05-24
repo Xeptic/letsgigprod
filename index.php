@@ -301,7 +301,7 @@ sec_session_start();
                             <h4 class="modal-title text-center">Sign Up</h4> 
                         </div>  
                         <div class="modal-body"> 
-                            <form action="includes/register.inc.php" method="post">
+                            <form id="register-form" method="post">
                                 <div class="form-group">
                                     <label for="chooseUsername"><span class="formTextBg">Choose Username</span></label>
                                     <input class="form-control form-controlGradientBg" type="text" placeholder="Username" name="username" id="username">
@@ -315,7 +315,8 @@ sec_session_start();
                                     <input class="form-control form-controlGradientBg"  type="text" placeholder="Email Address" name="email" id="email">
                                 </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-success" name="register" id="register" atl="register">Sign Up</button>
+                            <div id="error2"></div>
+                            <button type="submit" name="register" id="btn-register" alt="register" class="btn btn-success">Register</button>
                             <button type="close" class="btn btn-warning" data-dismiss="modal">Close</button>
                          </div>
                             </form>
