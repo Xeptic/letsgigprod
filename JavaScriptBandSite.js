@@ -140,7 +140,7 @@ $('document').ready(function()
    success :  function(response)
       {      
      if(response=="ok"){
-         window.location.href = "register_success.php";
+         window.location.href = "newuser.php";
      }
      else{   
       $("#error2").fadeIn(1000, function(){  

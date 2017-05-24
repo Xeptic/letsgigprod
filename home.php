@@ -7,17 +7,11 @@ include_once 'includes/showposts.php';
 
 sec_session_start();
 
+
 if(empty($_SESSION['username'])) {
    header("Location: index.php");
-}
-
-$current_user = $_SESSION['username'];
-//$users = show_users($mysqli);
-//$following = following($_SESSION['user_id'], $mysqli);
-if (login_check($mysqli) == true) {
-    $logged = 'in';
-} else {
-    $logged = 'out';
+}else{
+	$username = mysqli_real_escape_string($mysqli,$_REQUEST['username']);
 }
 ?>
 
@@ -80,9 +74,6 @@ if (login_check($mysqli) == true) {
     </nav>
 </head>
 <body>
-<?php if (login_check($mysqli) == true){ echo 'logged ' . $logged . ' as ' . htmlentities($_SESSION['username']);} ?>
-
-<?php  ?>
 
 <div id="homeHeader" class="container-fluid">
         <div class="jumbotron center"><h1>Whats New</h1></div>
