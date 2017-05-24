@@ -70,14 +70,30 @@ body.modal-open {
   background-position: center;
   background-size: cover;
 }
+.carousel-caption{
+    margin-bottom: 0%;
+
+}
 .carousel-caption h1{
-  font-size: 5.4em;
+    color: white;
+       -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+  border-radius: 5px;
+  background-color: rgba(102, 163, 255,0.5);
+  width: 100%;
+  height: auto;
+  font-size: 7vw;
   font-family:'BioRhyme', serif;
-  padding-bottom: .4em;
+  border: 1px solid white;
 }
 .carousel-caption p{
+       -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+  border: 1px solid white;
   font-family:'BioRhyme', serif;
-  font-size: 2em;
+  font-size: 4vw;
+  border-radius: 5px;
+  background-color: rgba(102, 163, 255,0.5);
 }
 table td{
     text-align: center;
@@ -252,7 +268,7 @@ subhead{
 #bandNameHeader{
     min-height: 100%;
     max-height: 100%;
-    margin: 0px 0px 0px 28%;
+    margin: 5px 0px 0px 28%;
     border-radius: 5px;
     width: 70%;
     position: relative;
@@ -386,4 +402,40 @@ bandbiotext{
     background:#bc2a8d;
     color: white;
 }
-
+#newUserBody{
+    background: #666;
+}
+#newUserMainDiv{
+    margin-top: 5%;
+}
+#newUserMainDiv h1{
+    font-size: 5vw;
+    color:aliceblue;
+}
+#newUserMainDiv h2{
+    font-size: 4vw;
+    color:aliceblue;
+}
+#newUserMainDiv table{
+    position: relative
+    color: aliceblue;
+    border: 2px solid white;
+    text-align: center;
+}
+#newUserMainDiv td{
+    border: 1px solid white;
+    width: 100%;
+    padding: 5%;
+}
+.fa-user-circle{
+    font-size: 5vw;
+    color: aliceblue;
+}
+.fa-fast-forward{
+    font-size: 2vw;
+    color: aliceblue;
+}
+.newProfileModal{
+    background-image: linear-gradient(#666,#000);
+    
+}

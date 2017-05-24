@@ -14,6 +14,11 @@ if(empty($_SESSION['username'])) {
 $current_user = $_SESSION['username'];
 //$users = show_users($mysqli);
 //$following = following($_SESSION['user_id'], $mysqli);
+if (login_check($mysqli) == true) {
+    $logged = 'in';
+} else {
+    $logged = 'out';
+}
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +31,6 @@ $current_user = $_SESSION['username'];
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
-	<script src="bootstrap/js/jquery.validate.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet"> 
     <script type="text/javascript" src="JavaScriptBandSite.js"></script>
 <nav id="theNavBar" class="navbar navbar-inverse">
@@ -46,7 +50,7 @@ $current_user = $_SESSION['username'];
             
             <div class="collapse navbar-collapse" id="MainNavBar">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="Home.html">Home</a></li>
+                    <li class="active"><a href="Home.php">Home</a></li>
                     <li><a data-target="#findAVenue" data-toggle="modal">Find a venue</a></li>
                     <li><a href="find-a-band-artist.html">Find a band/artist</a></li>
                     
@@ -76,6 +80,9 @@ $current_user = $_SESSION['username'];
     </nav>
 </head>
 <body>
+<?php if (login_check($mysqli) == true){ echo 'logged ' . $logged . ' as ' . htmlentities($_SESSION['username']);} ?>
+
+<?php  ?>
 
 <div id="homeHeader" class="container-fluid">
         <div class="jumbotron center"><h1>Whats New</h1></div>
