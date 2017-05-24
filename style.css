@@ -348,7 +348,7 @@ bandbiotext{
    background-color: lightskyblue;
    border: 1px solid white;  
 }
-td{
+#bandInfoTable td{
     border: 1px solid white;
     background-color: powderblue;
 }
