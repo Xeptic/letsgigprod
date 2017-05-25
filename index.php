@@ -24,6 +24,7 @@ sec_session_start();
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=BioRhyme" rel="stylesheet"> 
     <script type="text/javascript" src="JavaScriptBandSite.js"></script>
+    <script type="text/javascript" src="includes/rl.js"></script>
 <nav id="theNavBar" class="navbar navbar-inverse">
         <div class="container-fluid">
             <!--Logo -->
@@ -301,10 +302,11 @@ sec_session_start();
                             <h4 class="modal-title text-center">Sign Up</h4> 
                         </div>  
                         <div class="modal-body"> 
-                            <form action="includes/checkdata.php" method="post">
+                            <form id="register-form" method="POST">
                                 <div class="form-group">
                                     <label for="chooseUsername"><span class="formTextBg">Choose Username</span></label>
                                     <input class="form-control form-controlGradientBg" type="text" placeholder="Username" name="username" id="username">
+                                    <div id="UsernameError"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="choosePassword"><span class="formTextBg">Enter Password</span></label>
@@ -313,10 +315,10 @@ sec_session_start();
                                 <div class="form-group">
                                     <label for="enterEmail"><span class="formTextBg">Enter Email Address</span></label>
                                     <input class="form-control form-controlGradientBg"  type="text" placeholder="Email Address" name="email" id="email">
+                                    <div id="EmailErorr"></div>
                                 </div>
                         <div class="modal-footer">
-                            <div id="error2"></div>
-                            <button type="submit" id="register" name="register" id="btn-register" alt="register" class="btn btn-success">Register</button>
+                            <button type="submit" id="submit" name="submit" id="btn-register" alt="register" class="btn btn-success">Register</button>
                             <button type="close" class="btn btn-warning" data-dismiss="modal">Close</button>
                          </div>
                             </form>

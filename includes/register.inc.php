@@ -3,8 +3,9 @@ include_once 'db_connect.php';
 include_once 'psl-config.php';
 
 $error_msg = "";
+$msg = array('Uname' => 'OK', 'Umail' => 'OK');
 
-if (isset($_POST['register'])){
+if (isset($_POST['submit'])){
 		$username = $_POST['username'];
 		$emai = $_POST['email'];
 		// Sanitize and validate the data passed in
@@ -13,11 +14,6 @@ if (isset($_POST['register'])){
 		$email = filter_var($email, FILTER_VALIDATE_EMAIL);
 		$membertype = "band";
 	
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        // Not a valid email
-        echo "The email address you entered is not valid";
-    }
-  
     // Username validity and password validity have been checked client side.
     // This should should be adequate as nobody gains any advantage from
     // breaking these rules.
@@ -35,11 +31,9 @@ if (isset($_POST['register'])){
         if ($stmt->num_rows == 1) {
             // A user with this email address already exists
             $error_msg .= 'A user with this email address already exists.';
-            echo "A user with this email address already exists.";
+            $msg['Umail'] = 'Email Already Exist';
         }
                 $stmt->close();
-    } else {
-        $error_msg .= '<p class="error">Database error Line 39</p>';
     }
  
     // check existing username
@@ -54,7 +48,7 @@ if (isset($_POST['register'])){
                 if ($stmt->num_rows == 1) {
                         // A user with this username already exists
                         $error_msg .= 'A user with this username already exists';
-                        echo "A user with this username already exists.";
+                        $msg['Uname'] = 'Username Already Exist';
                 }
                 $stmt->close();
         }
@@ -73,6 +67,9 @@ if (isset($_POST['register'])){
             $insert_stmt->execute();
         }
         //header('Location: ../index.php');
-        echo "ok";
+        $msg['Umail'] = 'OK';
+        $msg['Uname'] = 'OK';
     }
 }
+echo json_encode($msg);
+?>
