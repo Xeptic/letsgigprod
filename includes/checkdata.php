@@ -2,8 +2,10 @@
 include_once 'db_connect.php';
 include_once 'psl-config.php';
 
+$msg = array('Uname' => 'OK', 'Umail' => 'OK');
 
-if (isset($_POST['submit'])){
+if (isset($_POST['register'])){
+        
 		$username = $_POST['username'];
 		$emai = $_POST['email'];
 		// Sanitize and validate the data passed in
@@ -33,9 +35,9 @@ if (isset($_POST['submit'])){
  
         if ($stmt->num_rows == 1) {
             // A user with this email address already exists
-            echo "Email Already Exist";
+            $msg['Umail'] = 'Email Already Exist';
         }else{
-            echo "OK";
+            $msg['Umail'] = 'OK';
         }
         $stmt->close();
     }
@@ -51,10 +53,12 @@ if (isset($_POST['submit'])){
  
                 if ($stmt->num_rows == 1) {
                         // A user with this username already exists
-                        echo "User Name Already Exist";
+                        $msg['Uname'] = 'User Name Already Exist';
                 }else{
-                    echo "OK";
+                    $msg['Uname'] = 'OK';
                 }
                 $stmt->close();
         }
 }
+echo json_encode($msg);
+?>

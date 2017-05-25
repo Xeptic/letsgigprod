@@ -134,19 +134,15 @@ $('document').ready(function()
    var data = $("#register-form").serialize();
     
    $.ajax({
-   type : 'POST',
-   url  : '/includes/register.inc.php',
-   data : data,
-   success :  function(response)
+       type : 'POST',
+       url  : '/includes/checkdata.php',
+       data : data,
+       success :  function(response)
       {      
-     if(response=="ok"){
-         window.location.href = "newuser.php";
-     }
-     else{   
-      $("#error2").fadeIn(1000, function(){  
-    $("#error2").html(response);
-         });
-     }
+
+         console.log(response);
+         //alert(response.Uname);
+
      }
    });
     return false;
