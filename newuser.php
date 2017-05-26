@@ -35,8 +35,7 @@
             <div class="collapse navbar-collapse" id="MainNavBar">
                 <ul class="nav navbar-nav">
                     <li><a href="home.php">Home</a></li>
-                    <li><a data-target="#findAVenue" data-toggle="modal">Find a venue</a></li>
-                    <li><a href="find-a-band-artist.html">Find a band/artist</a></li>
+                    <li><a href="search.php">Search</a></li>
                     
                     <!-- Dropdown Menu -->
                     

@@ -36,7 +36,7 @@ if(empty($_SESSION['username'])) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                 <a href="home.php" class="navbar-brand">Let's Gig</a>
+                <a href="home.php" class="navbar-brand">Let's Gig</a>
             </div>
         
             <!--Menu Items-->
@@ -45,8 +45,7 @@ if(empty($_SESSION['username'])) {
             <div class="collapse navbar-collapse" id="MainNavBar">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="Home.php">Home</a></li>
-                    <li><a data-target="#findAVenue" data-toggle="modal">Find a venue</a></li>
-                    <li><a href="find-a-band-artist.html">Find a band/artist</a></li>
+                    <li><a href="search.php">Search</a></li>
                     
                     <!-- Dropdown Menu -->
                     
