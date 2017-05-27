@@ -5,10 +5,9 @@
     <title>Let's Gig - Search</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="moment.js" type="text/javascript"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="moment.js" type="text/javascript"></script> 
     <script src="https://use.fontawesome.com/725e203c7d.js"></script>
     <script type="text/javascript" src="JavaScriptBandSite.js"></script>
     <script src="bootstrap/css/bootstrap-social.css"></script>
@@ -44,7 +43,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Controls<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="active" href="userprofile.php">Profile</a></li>
+                            <li><a href="userprofile.php">Profile</a></li>
                             <li><a href="#">Friends</a></li>
                             <li><a href="#">Settings</a></li>
                         </ul>
@@ -64,6 +63,7 @@
         </div>
     </nav>
 </head>
+    
 <body>
 <div id="searchWrapper" class="container-fluid">
 <div class="container">
@@ -191,4 +191,5 @@
     </div>
 </div>
 </body>
+    
 </html>
