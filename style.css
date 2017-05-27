@@ -436,6 +436,41 @@ bandbiotext{
     color: aliceblue;
 }
 .newProfileModal{
-    background-image: linear-gradient(#666,#000);
+    background-image: linear-gradient(#666,#000);  
+}
+
+#datePicker{
+    width: 100%;
+    background: #fff;
+    cursor: pointer; 
+    border: 1px solid #ccc;
+}
+.pickersResize{
+    width: 100%;
     
+}
+#searchResultsTable{
+    border: 1px solid black;
+    width: 100%;
+    background-color: grey;
+}
+
+#searchResultsTable td{
+   border-bottom: 1px solid grey;
+   background-color: #999;
+}
+#searchResultsTable tbody{
+    border:1px solid black;
+}
+#tableHeads td{
+    background-color: grey;
+    border-bottom: white;
+}
+#searchWrapper{
+    background-image: linear-gradient(#666,#FFF);
+}
+#searchWrapper h1{
+    text-align: center;
+    font-size: 4vw;
+    color: white;
 }
