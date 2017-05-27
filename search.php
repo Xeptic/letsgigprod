@@ -44,7 +44,7 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Controls<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="active" href="#">Profile</a></li>
+                            <li><a class="active" href="userprofile.php">Profile</a></li>
                             <li><a href="#">Friends</a></li>
                             <li><a href="#">Settings</a></li>
                         </ul>
