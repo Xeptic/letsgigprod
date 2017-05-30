@@ -3,8 +3,8 @@
  * These are the database login details
  */  
 define("HOST", "localhost");     // The host you want to connect to.
-define("USER", "dean");    // The database username. 
-define("PASSWORD", "fishsquee2");    // The database password. 
+define("USER", "root");    // The database username. 
+define("PASSWORD", "");    // The database password. 
 define("DATABASE", "members");    // The database name.
  
 define("CAN_REGISTER", "any");
